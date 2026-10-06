@@ -64,7 +64,7 @@ In real-world fintech applications, transaction patterns continuously shift due 
 ### Installation
 1. Clone this repository:
    ```bash
-   git clone <YOUR-GITHUB-REPO-URL>
+   git clone https://github.com/snehakumar2026/Anomaly-Detection-with-Drift-Monitoring.git
    cd fraud_drift_project
 ## 5. How to Reproduce Results
 - **Standalone Script:** Run `python main.py` in your terminal.
