@@ -66,4 +66,17 @@ In real-world fintech applications, transaction patterns continuously shift due 
    ```bash
    git clone <YOUR-GITHUB-REPO-URL>
    cd fraud_drift_project
+## 5. How to Reproduce Results
+- **Standalone Script:** Run `python main.py` in your terminal.
+- **Interactive Notebook:** Open `notebooks/fraud_drift_pipeline.ipynb` in Jupyter Notebook and select **Kernel > Restart & Run All**.
+
+---
+
+## 6. Bonus Implementations & Experiments
+1. **Artificial Concept Drift Simulation:**
+   - Injected distribution shifts and Gaussian noise into transaction amounts (`Amount`) and key PCA features (`V1` to `V4`).
+   - The drift monitoring metric jumped to **0.3369** (exceeding the `0.1000` alert threshold), proving the monitor detects severe behavioral shifts immediately.
+2. **Automated Retraining Loop:**
+   - Implemented `automated_monitoring_and_retrain_pipeline()` to evaluate incoming transaction streams.
+   - When incoming batch drift reached **0.1476** (exceeding `0.1000`), the system triggered automated retraining, refitting a new Random Forest on the shifted distribution and achieving an updated PR-AUC of **1.0000**.
 
